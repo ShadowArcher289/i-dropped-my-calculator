@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="I Dropped My Calculator"
+run/main_scene="uid://bv2x3qji5q84a"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 

@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://bv2x3qji5q84a"]
+[gd_scene load_steps=2 format=3 uid="uid://bv2x3qji5q84a"]
+
+[ext_resource type="PackedScene" uid="uid://co8sti2ydvcrl" path="res://scenes/calculator.tscn" id="1_o5qli"]
 
 [node name="Main" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Calculator" parent="." instance=ExtResource("1_o5qli")]

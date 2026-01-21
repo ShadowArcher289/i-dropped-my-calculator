@@ -1,0 +1,159 @@
+extends Node2D
+
+@onready var screen_text: RichTextLabel = $ScreenText
+
+var screen_display = "";
+var calculation: Array = [];
+
+
+func divide(x, y) -> float: ## x / y
+	return float(x) / float(y);
+	
+func multiply(x, y) -> float: ## x * y
+	return float(x) * float(y);
+	
+func subtract(x, y) -> float: ## x - y
+	return float(x) - float(y);
+	
+func addition(x, y) -> float: ## x + y
+	return float(x) + float(y);
+
+
+func update_screen() -> void: ## updates the claculator screen with the text from screen_display
+	screen_text.text = screen_display;
+
+func run_calc() -> float:
+	screen_display += " = ";
+	
+	var final_result = null;
+	
+	var i: int = 0;
+	
+	if(calculation.size() == 1):
+		final_result = float(calculation.get(0));
+	
+	while (i < calculation.size()):
+		if(!calculation.get(i).is_valid_float()): # pass non-numeric values
+			continue;
+		else:
+			print(str(calculation) + " | " + str(i))
+			var x = calculation.get(i);
+			var operation = "";
+			var y = "";
+			
+			if(final_result != null): # set x to the last result if one is present
+				x = final_result;
+			else: 
+				x = calculation.get(i);
+				operation = calculation.get(i+1);
+				y = calculation.get(i+2);
+				
+			
+			match operation:
+				"/":
+					final_result = divide(x, y);
+				"*":
+					final_result = multiply(x, y);
+				"-":
+					final_result = subtract(x, y);
+				"+":
+					final_result = addition(x, y);
+			
+			if((i+3) >= calculation.size()):
+				break;
+			i = i + 2; # move by 2 values
+	
+	#final_result *= randf_range(0, 2)
+	#final_result = snapped(final_result, 0.01);
+	
+	calculation.resize(0); # reset the calculation array
+	calculation.append(str(final_result));
+	
+	screen_display += str(final_result) + "\n" + str(final_result); # update screen
+	if(is_nan(final_result) || is_inf(final_result)): # account for is inf or nan
+		print("ran");
+		screen_display += "\n0.0";
+		final_result = 0.0;
+		
+		calculation.resize(0); # reset the calculation array
+		calculation.append(str(final_result));
+		
+		print(screen_display + str(calculation))
+	update_screen();
+	
+	return float(final_result);
+
+func add_to_calc(value: String) -> void: ## adds the input to the calculation, and calls to update the screen
+	
+	var last_index = calculation.size()-1; ## the last index of the calculation array
+	
+	if(calculation.is_empty()):
+		if(value.is_valid_float()):
+			calculation.append(value);
+			screen_display += value;
+	else:
+		if(value.is_valid_float()): # run logic if the value is a number.
+			if(!calculation.get(last_index).is_valid_float()): # add to the array if the previous value is not a number
+				calculation.append(value);
+			else: # update the last value in the array if it is a valid number (ex: 1 -> 13)
+				calculation.set(last_index, calculation.get(last_index) + value);
+			screen_display += value;
+		else: # append non-number values to calculation
+			if(calculation.get(last_index).is_valid_float()): # do not put two non-number values next to eachother
+				calculation.append(value);
+				screen_display += value;
+	
+	update_screen();
+
+func clear_calc() -> void:
+	print(str(calculation))
+	screen_display = "".join(calculation);
+	update_screen();
+
+func _on_button_1_pressed() -> void:
+	add_to_calc("1");
+
+func _on_button_2_pressed() -> void:
+	add_to_calc("2");
+
+func _on_button_3_pressed() -> void:
+	add_to_calc("3");
+
+func _on_button_4_pressed() -> void:
+	add_to_calc("4");
+
+func _on_button_5_pressed() -> void:
+	add_to_calc("5");
+
+func _on_button_6_pressed() -> void:
+	add_to_calc("6");
+	
+func _on_button_7_pressed() -> void:
+	add_to_calc("7");
+
+func _on_button_8_pressed() -> void:
+	add_to_calc("8");
+
+func _on_button_9_pressed() -> void:
+	add_to_calc("9");
+
+func _on_button_0_pressed() -> void:
+	add_to_calc("0");
+
+func _on_button_divide_pressed() -> void:
+	add_to_calc("/");
+
+func _on_button_multiply_pressed() -> void:
+	add_to_calc("*");
+
+func _on_button_subtract_pressed() -> void:
+	add_to_calc("-");
+
+func _on_button_add_pressed() -> void:
+	add_to_calc("+");
+
+func _on_button_enter_pressed() -> void:
+	print(run_calc());
+
+func _on_button_clear_pressed() -> void:
+	clear_calc();

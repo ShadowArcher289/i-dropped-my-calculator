@@ -1,0 +1,242 @@
+[gd_scene load_steps=8 format=3 uid="uid://co8sti2ydvcrl"]
+
+[ext_resource type="Script" uid="uid://2el0krcrw2qc" path="res://scripts/calculator.gd" id="1_4a2e8"]
+[ext_resource type="Texture2D" uid="uid://cwffnk5um8u33" path="res://assets/calculator/CalcBackground.png" id="1_47tay"]
+[ext_resource type="Theme" uid="uid://c635ramjqf4e0" path="res://assets/CalculatorButtonsStyle.tres" id="2_jgmda"]
+[ext_resource type="FontFile" uid="uid://cslolpkbwdier" path="res://assets/fonts/boldpixels.boldpixels.otf" id="2_q1y2q"]
+[ext_resource type="Texture2D" uid="uid://bng2w8i4kdg6h" path="res://assets/calculator/NumberButton.png" id="3_sio27"]
+[ext_resource type="Texture2D" uid="uid://xjy4sa3lk3p7" path="res://assets/calculator/EnterButton.png" id="4_jgmda"]
+[ext_resource type="Texture2D" uid="uid://dv6eo5vike224" path="res://assets/calculator/Screen.png" id="6_4a2e8"]
+
+[node name="Calculator" type="Node2D"]
+script = ExtResource("1_4a2e8")
+
+[node name="CalcBackground" type="Sprite2D" parent="."]
+position = Vector2(601, 322)
+texture = ExtResource("1_47tay")
+
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="button1" type="Button" parent="Buttons"]
+offset_left = 448.0
+offset_top = 292.0
+offset_right = 520.0
+offset_bottom = 348.0
+theme = ExtResource("2_jgmda")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_q1y2q")
+theme_override_font_sizes/font_size = 32
+text = "1"
+icon = ExtResource("3_sio27")
+icon_alignment = 1
+
+[node name="button2" type="Button" parent="Buttons"]
+offset_left = 533.0
+offset_top = 292.0
+offset_right = 605.0
+offset_bottom = 348.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_q1y2q")
+theme_override_font_sizes/font_size = 32
+text = "2"
+icon = ExtResource("3_sio27")
+icon_alignment = 1
+
+[node name="button3" type="Button" parent="Buttons"]
+offset_left = 618.0
+offset_top = 292.0
+offset_right = 690.0
+offset_bottom = 348.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_q1y2q")
+theme_override_font_sizes/font_size = 32
+text = "3"
+icon = ExtResource("3_sio27")
+icon_alignment = 1
+
+[node name="button4" type="Button" parent="Buttons"]
+offset_left = 447.0
+offset_top = 360.0
+offset_right = 519.0
+offset_bottom = 416.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_q1y2q")
+theme_override_font_sizes/font_size = 32
+text = "4"
+icon = ExtResource("3_sio27")
+icon_alignment = 1
+
+[node name="button5" type="Button" parent="Buttons"]
+offset_left = 533.0
+offset_top = 362.0
+offset_right = 605.0
+offset_bottom = 418.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_q1y2q")
+theme_override_font_sizes/font_size = 32
+text = "5"
+icon = ExtResource("3_sio27")
+icon_alignment = 1
+
+[node name="button6" type="Button" parent="Buttons"]
+offset_left = 618.0
+offset_top = 362.0
+offset_right = 690.0
+offset_bottom = 418.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_q1y2q")
+theme_override_font_sizes/font_size = 32
+text = "6"
+icon = ExtResource("3_sio27")
+icon_alignment = 1
+
+[node name="button7" type="Button" parent="Buttons"]
+offset_left = 450.0
+offset_top = 435.0
+offset_right = 522.0
+offset_bottom = 491.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_q1y2q")
+theme_override_font_sizes/font_size = 32
+text = "7"
+icon = ExtResource("3_sio27")
+icon_alignment = 1
+
+[node name="button8" type="Button" parent="Buttons"]
+offset_left = 536.0
+offset_top = 435.0
+offset_right = 608.0
+offset_bottom = 491.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_q1y2q")
+theme_override_font_sizes/font_size = 32
+text = "8"
+icon = ExtResource("3_sio27")
+icon_alignment = 1
+
+[node name="button9" type="Button" parent="Buttons"]
+offset_left = 620.0
+offset_top = 432.0
+offset_right = 692.0
+offset_bottom = 488.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_q1y2q")
+theme_override_font_sizes/font_size = 32
+text = "9"
+icon = ExtResource("3_sio27")
+icon_alignment = 1
+
+[node name="button0" type="Button" parent="Buttons"]
+offset_left = 533.0
+offset_top = 504.0
+offset_right = 605.0
+offset_bottom = 560.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_q1y2q")
+theme_override_font_sizes/font_size = 32
+text = "0"
+icon = ExtResource("3_sio27")
+icon_alignment = 1
+
+[node name="buttonDivide" type="Button" parent="Buttons"]
+offset_left = 728.0
+offset_top = 294.0
+offset_right = 800.0
+offset_bottom = 350.0
+scale = Vector2(0.8, 0.8)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_q1y2q")
+theme_override_font_sizes/font_size = 32
+text = "/"
+icon = ExtResource("3_sio27")
+icon_alignment = 1
+
+[node name="buttonMultiply" type="Button" parent="Buttons"]
+offset_left = 730.0
+offset_top = 351.0
+offset_right = 802.0
+offset_bottom = 407.0
+scale = Vector2(0.8, 0.8)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_q1y2q")
+theme_override_font_sizes/font_size = 32
+text = "x"
+icon = ExtResource("3_sio27")
+icon_alignment = 1
+
+[node name="buttonSubtract" type="Button" parent="Buttons"]
+offset_left = 729.0
+offset_top = 403.0
+offset_right = 801.0
+offset_bottom = 459.0
+scale = Vector2(0.8, 0.8)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_q1y2q")
+theme_override_font_sizes/font_size = 32
+text = "-"
+icon = ExtResource("3_sio27")
+icon_alignment = 1
+
+[node name="buttonAdd" type="Button" parent="Buttons"]
+offset_left = 727.0
+offset_top = 460.0
+offset_right = 799.0
+offset_bottom = 516.0
+scale = Vector2(0.8, 0.8)
+theme = ExtResource("2_jgmda")
+text = "+"
+icon = ExtResource("3_sio27")
+icon_alignment = 1
+
+[node name="buttonEnter" type="Button" parent="Buttons"]
+offset_left = 625.0
+offset_top = 516.0
+offset_right = 789.0
+offset_bottom = 602.0
+theme = ExtResource("2_jgmda")
+text = "enter"
+icon = ExtResource("4_jgmda")
+icon_alignment = 1
+expand_icon = true
+
+[node name="buttonClear" type="Button" parent="Buttons"]
+offset_left = 405.0
+offset_top = 539.0
+offset_right = 518.0
+offset_bottom = 597.0
+theme = ExtResource("2_jgmda")
+text = "clear"
+icon = ExtResource("4_jgmda")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Screen" type="Sprite2D" parent="."]
+position = Vector2(599.3209, 151.99997)
+scale = Vector2(0.5141975, 0.35339507)
+texture = ExtResource("6_4a2e8")
+
+[node name="ScreenText" type="RichTextLabel" parent="."]
+offset_left = 407.0
+offset_top = 47.0
+offset_right = 790.0
+offset_bottom = 256.0
+theme = ExtResource("2_jgmda")
+scroll_following = true
+vertical_alignment = 2
+
+[connection signal="pressed" from="Buttons/button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Buttons/button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Buttons/button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Buttons/button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Buttons/button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="Buttons/button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="Buttons/button7" to="." method="_on_button_7_pressed"]
+[connection signal="pressed" from="Buttons/button8" to="." method="_on_button_8_pressed"]
+[connection signal="pressed" from="Buttons/button9" to="." method="_on_button_9_pressed"]
+[connection signal="pressed" from="Buttons/button0" to="." method="_on_button_0_pressed"]
+[connection signal="pressed" from="Buttons/buttonDivide" to="." method="_on_button_divide_pressed"]
+[connection signal="pressed" from="Buttons/buttonMultiply" to="." method="_on_button_multiply_pressed"]
+[connection signal="pressed" from="Buttons/buttonSubtract" to="." method="_on_button_subtract_pressed"]
+[connection signal="pressed" from="Buttons/buttonAdd" to="." method="_on_button_add_pressed"]
+[connection signal="pressed" from="Buttons/buttonEnter" to="." method="_on_button_enter_pressed"]
+[connection signal="pressed" from="Buttons/buttonClear" to="." method="_on_button_clear_pressed"]
