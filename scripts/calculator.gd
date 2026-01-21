@@ -70,6 +70,7 @@ func run_calc() -> float:
 	calculation.append(str(final_result));
 	
 	screen_display += str(final_result) + "\n" + str(final_result); # update screen
+	
 	if(is_nan(final_result) || is_inf(final_result)): # account for is inf or nan
 		print("ran");
 		screen_display += "\n0.0";
@@ -79,8 +80,8 @@ func run_calc() -> float:
 		calculation.append(str(final_result));
 		
 		print(screen_display + str(calculation))
+		
 	update_screen();
-	
 	return float(final_result);
 
 func add_to_calc(value: String) -> void: ## adds the input to the calculation, and calls to update the screen
