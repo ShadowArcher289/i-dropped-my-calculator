@@ -1,10 +1,44 @@
 extends Node2D
 
+@onready var button_1: Button = $Buttons/button1
+@onready var button_2: Button = $Buttons/button2
+@onready var button_3: Button = $Buttons/button3
+@onready var button_4: Button = $Buttons/button4
+@onready var button_5: Button = $Buttons/button5
+@onready var button_6: Button = $Buttons/button6
+@onready var button_7: Button = $Buttons/button7
+@onready var button_8: Button = $Buttons/button8
+@onready var button_9: Button = $Buttons/button9
+@onready var button_0: Button = $Buttons/button0
+@onready var button_divide: Button = $Buttons/buttonDivide
+@onready var button_multiply: Button = $Buttons/buttonMultiply
+@onready var button_subtract: Button = $Buttons/buttonSubtract
+@onready var button_add: Button = $Buttons/buttonAdd
+@onready var button_enter: Button = $Buttons/buttonEnter
+@onready var button_clear: Button = $Buttons/buttonClear
+
 @onready var screen_text: RichTextLabel = $ScreenText
 
 var screen_display = "";
 var calculation: Array = [];
 
+func _ready() -> void:
+	button_1.focus_mode = Control.FOCUS_NONE;
+	button_2.focus_mode = Control.FOCUS_NONE;
+	button_3.focus_mode = Control.FOCUS_NONE;
+	button_4.focus_mode = Control.FOCUS_NONE;
+	button_5.focus_mode = Control.FOCUS_NONE;
+	button_6.focus_mode = Control.FOCUS_NONE;
+	button_7.focus_mode = Control.FOCUS_NONE;
+	button_8.focus_mode = Control.FOCUS_NONE;
+	button_9.focus_mode = Control.FOCUS_NONE;
+	button_0.focus_mode = Control.FOCUS_NONE;
+	button_divide.focus_mode = Control.FOCUS_NONE;
+	button_multiply.focus_mode = Control.FOCUS_NONE;
+	button_subtract.focus_mode = Control.FOCUS_NONE;
+	button_add.focus_mode = Control.FOCUS_NONE;
+	button_enter.focus_mode = Control.FOCUS_NONE;
+	button_clear.focus_mode = Control.FOCUS_NONE;
 
 func divide(x, y) -> float: ## x / y
 	return float(x) / float(y);
@@ -23,6 +57,11 @@ func update_screen() -> void: ## updates the claculator screen with the text fro
 	screen_text.text = screen_display;
 
 func run_calc() -> float:
+	
+	var x = "";
+	var operation = "";
+	var y = "";
+	
 	screen_display += " = ";
 	
 	var final_result = null;
@@ -37,9 +76,9 @@ func run_calc() -> float:
 			continue;
 		else:
 			print(str(calculation) + " | " + str(i))
-			var x = calculation.get(i);
-			var operation = "";
-			var y = "";
+			x = calculation.get(i);
+			operation = "";
+			y = "";
 			
 			if(final_result != null): # set x to the last result if one is present
 				x = final_result;
@@ -52,19 +91,32 @@ func run_calc() -> float:
 			match operation:
 				"/":
 					final_result = divide(x, y);
+					print("unmodified_result: " + str(final_result));
+					# randomizer
+					final_result *= randf_range(0.9, 1.1)
+					final_result = snapped(final_result, 0.01);
 				"*":
 					final_result = multiply(x, y);
+					print("unmodified_result: " + str(final_result));
+					# randomizer
+					final_result *= randf_range(0.8, 1.2)
+					final_result = snapped(final_result, 0.01);
 				"-":
 					final_result = subtract(x, y);
+					print("unmodified_result: " + str(final_result));
+					# randomizer
+					final_result *= randf_range(0.75, 1.35)
+					final_result = snapped(final_result, 0.01);
 				"+":
 					final_result = addition(x, y);
+					print("unmodified_result: " + str(final_result));
+					# randomizer
+					final_result *= randf_range(0.6, 1.4)
+					final_result = snapped(final_result, 0.01);
 			
 			if((i+3) >= calculation.size()):
 				break;
 			i = i + 2; # move by 2 values
-	
-	#final_result *= randf_range(0, 2)
-	#final_result = snapped(final_result, 0.01);
 	
 	calculation.resize(0); # reset the calculation array
 	calculation.append(str(final_result));
@@ -82,6 +134,7 @@ func run_calc() -> float:
 		print(screen_display + str(calculation))
 		
 	update_screen();
+	SignalBus.calculated_result.emit(float(final_result), operation);
 	return float(final_result);
 
 func add_to_calc(value: String) -> void: ## adds the input to the calculation, and calls to update the screen

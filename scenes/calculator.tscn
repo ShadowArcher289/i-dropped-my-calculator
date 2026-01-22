@@ -55,10 +55,10 @@ icon = ExtResource("3_sio27")
 icon_alignment = 1
 
 [node name="button4" type="Button" parent="Buttons"]
-offset_left = 88.5
-offset_top = 360.0
-offset_right = 160.5
-offset_bottom = 416.0
+offset_left = 89.5
+offset_top = 362.0
+offset_right = 161.5
+offset_bottom = 418.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_q1y2q")
 theme_override_font_sizes/font_size = 32
@@ -91,10 +91,10 @@ icon = ExtResource("3_sio27")
 icon_alignment = 1
 
 [node name="button7" type="Button" parent="Buttons"]
-offset_left = 91.5
-offset_top = 435.0
-offset_right = 163.5
-offset_bottom = 491.0
+offset_left = 90.5
+offset_top = 434.0
+offset_right = 162.5
+offset_bottom = 490.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_q1y2q")
 theme_override_font_sizes/font_size = 32
@@ -103,10 +103,10 @@ icon = ExtResource("3_sio27")
 icon_alignment = 1
 
 [node name="button8" type="Button" parent="Buttons"]
-offset_left = 177.5
-offset_top = 435.0
-offset_right = 249.5
-offset_bottom = 491.0
+offset_left = 176.5
+offset_top = 434.0
+offset_right = 248.5
+offset_bottom = 490.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_q1y2q")
 theme_override_font_sizes/font_size = 32
@@ -127,9 +127,9 @@ icon = ExtResource("3_sio27")
 icon_alignment = 1
 
 [node name="button0" type="Button" parent="Buttons"]
-offset_left = 174.5
+offset_left = 175.5
 offset_top = 504.0
-offset_right = 246.5
+offset_right = 247.5
 offset_bottom = 560.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_q1y2q")
@@ -139,9 +139,9 @@ icon = ExtResource("3_sio27")
 icon_alignment = 1
 
 [node name="buttonDivide" type="Button" parent="Buttons"]
-offset_left = 369.50003
+offset_left = 368.5
 offset_top = 294.0
-offset_right = 441.50003
+offset_right = 440.5
 offset_bottom = 350.0
 scale = Vector2(0.8, 0.8)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -152,10 +152,10 @@ icon = ExtResource("3_sio27")
 icon_alignment = 1
 
 [node name="buttonMultiply" type="Button" parent="Buttons"]
-offset_left = 371.50003
-offset_top = 351.0
-offset_right = 443.50003
-offset_bottom = 407.0
+offset_left = 368.5
+offset_top = 348.0
+offset_right = 440.5
+offset_bottom = 404.0
 scale = Vector2(0.8, 0.8)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_q1y2q")
@@ -165,10 +165,10 @@ icon = ExtResource("3_sio27")
 icon_alignment = 1
 
 [node name="buttonSubtract" type="Button" parent="Buttons"]
-offset_left = 370.50003
+offset_left = 368.5
 offset_top = 403.0
-offset_right = 442.50003
-offset_bottom = 459.0
+offset_right = 440.5
+offset_bottom = 459.25
 scale = Vector2(0.8, 0.8)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_q1y2q")

@@ -1,14 +1,26 @@
-[gd_scene load_steps=7 format=3 uid="uid://b6ng52oealvwa"]
+[gd_scene load_steps=9 format=3 uid="uid://b6ng52oealvwa"]
 
 [ext_resource type="Script" uid="uid://csmvm02gc0jff" path="res://scripts/exp_bar.gd" id="1_hlrur"]
 [ext_resource type="Texture2D" uid="uid://d4jskux0ii8tb" path="res://assets/calculator/BigButton.png" id="1_j70uk"]
 [ext_resource type="Texture2D" uid="uid://dc3tpnt3as7cp" path="res://assets/calculator/ExpBarTop.png" id="1_uwwo8"]
 [ext_resource type="Texture2D" uid="uid://b1yqvamyurtni" path="res://assets/calculator/ExpBarCore.png" id="2_j70uk"]
+[ext_resource type="Texture2D" uid="uid://xjy4sa3lk3p7" path="res://assets/calculator/EnterButton.png" id="3_w7p5i"]
 [ext_resource type="Texture2D" uid="uid://cdgtufar8ibrq" path="res://assets/calculator/NumberMarker.png" id="4_ekkt7"]
+[ext_resource type="Texture2D" uid="uid://bng2w8i4kdg6h" path="res://assets/calculator/NumberButton.png" id="4_o3m62"]
 [ext_resource type="Theme" uid="uid://c635ramjqf4e0" path="res://assets/CalculatorButtonsStyle.tres" id="5_o3m62"]
 
 [node name="ExpBar" type="Node2D"]
 script = ExtResource("1_hlrur")
+
+[node name="NumberButton" type="Sprite2D" parent="."]
+position = Vector2(123.000015, 166.00002)
+rotation = 1.5707964
+scale = Vector2(1.1384029, 1.5536141)
+texture = ExtResource("4_o3m62")
+
+[node name="EnterButton" type="Sprite2D" parent="."]
+position = Vector2(137, 222)
+texture = ExtResource("3_w7p5i")
 
 [node name="BigButton" type="Sprite2D" parent="."]
 position = Vector2(47, 280.02692)
@@ -22,7 +34,6 @@ offset_top = 412.0
 offset_right = 292.70175
 offset_bottom = 453.0
 rotation = -1.5707964
-value = 45.0
 allow_greater = true
 nine_patch_stretch = true
 texture_over = ExtResource("1_uwwo8")
@@ -33,7 +44,7 @@ position = Vector2(115.75001, 69.00001)
 scale = Vector2(1.4609375, 0.703125)
 texture = ExtResource("4_ekkt7")
 
-[node name="GoalNumber" type="RichTextLabel" parent="."]
+[node name="GoalNumberDisplay" type="RichTextLabel" parent="."]
 offset_left = 26.0
 offset_top = 28.024391
 offset_right = 210.0
@@ -41,5 +52,27 @@ offset_bottom = 106.97561
 theme = ExtResource("5_o3m62")
 theme_override_font_sizes/normal_font_size = 52
 text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelDisplay" type="RichTextLabel" parent="."]
+offset_left = 100.0
+offset_top = 146.0
+offset_right = 147.0
+offset_bottom = 191.0
+theme = ExtResource("5_o3m62")
+theme_override_font_sizes/normal_font_size = 40
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 102.0
+offset_top = 200.0
+offset_right = 176.0
+offset_bottom = 245.0
+theme = ExtResource("5_o3m62")
+theme_override_font_sizes/normal_font_size = 36
+text = "LVL"
 horizontal_alignment = 1
 vertical_alignment = 1
