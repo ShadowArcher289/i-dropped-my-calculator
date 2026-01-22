@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://b6ng52oealvwa"]
+
+[ext_resource type="Script" uid="uid://csmvm02gc0jff" path="res://scripts/exp_bar.gd" id="1_hlrur"]
+[ext_resource type="Texture2D" uid="uid://d4jskux0ii8tb" path="res://assets/calculator/BigButton.png" id="1_j70uk"]
+[ext_resource type="Texture2D" uid="uid://dc3tpnt3as7cp" path="res://assets/calculator/ExpBarTop.png" id="1_uwwo8"]
+[ext_resource type="Texture2D" uid="uid://b1yqvamyurtni" path="res://assets/calculator/ExpBarCore.png" id="2_j70uk"]
+[ext_resource type="Texture2D" uid="uid://cdgtufar8ibrq" path="res://assets/calculator/NumberMarker.png" id="4_ekkt7"]
+[ext_resource type="Theme" uid="uid://c635ramjqf4e0" path="res://assets/CalculatorButtonsStyle.tres" id="5_o3m62"]
+
+[node name="ExpBar" type="Node2D"]
+script = ExtResource("1_hlrur")
+
+[node name="BigButton" type="Sprite2D" parent="."]
+position = Vector2(47, 280.02692)
+rotation = -1.5707964
+scale = Vector2(0.9814183, 0.7265625)
+texture = ExtResource("1_j70uk")
+
+[node name="ExpBarDisplay" type="TextureProgressBar" parent="."]
+offset_left = 28.0
+offset_top = 412.0
+offset_right = 292.70175
+offset_bottom = 453.0
+rotation = -1.5707964
+value = 45.0
+allow_greater = true
+nine_patch_stretch = true
+texture_over = ExtResource("1_uwwo8")
+texture_progress = ExtResource("2_j70uk")
+
+[node name="NumberMarker" type="Sprite2D" parent="."]
+position = Vector2(115.75001, 69.00001)
+scale = Vector2(1.4609375, 0.703125)
+texture = ExtResource("4_ekkt7")
+
+[node name="GoalNumber" type="RichTextLabel" parent="."]
+offset_left = 26.0
+offset_top = 28.024391
+offset_right = 210.0
+offset_bottom = 106.97561
+theme = ExtResource("5_o3m62")
+theme_override_font_sizes/normal_font_size = 52
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bv2x3qji5q84a"]
+[gd_scene load_steps=3 format=3 uid="uid://bv2x3qji5q84a"]
 
+[ext_resource type="PackedScene" uid="uid://b6ng52oealvwa" path="res://scenes/exp_bar.tscn" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://co8sti2ydvcrl" path="res://scenes/calculator.tscn" id="1_o5qli"]
 
 [node name="Main" type="Node2D"]
@@ -7,4 +8,8 @@
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 
+[node name="ExpBar" parent="." instance=ExtResource("1_0wfyh")]
+position = Vector2(805, 37)
+
 [node name="Calculator" parent="." instance=ExtResource("1_o5qli")]
+position = Vector2(335, 0)
