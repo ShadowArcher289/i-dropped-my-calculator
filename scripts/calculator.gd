@@ -19,6 +19,8 @@ extends Node2D
 
 @onready var screen_text: RichTextLabel = $ScreenText
 
+var do_random = false; ## true to do random output, false to do normal output
+
 var screen_display = "";
 var calculation: Array = [];
 
@@ -92,27 +94,27 @@ func run_calc() -> float:
 				"/":
 					final_result = divide(x, y);
 					print("unmodified_result: " + str(final_result));
-					# randomizer
-					final_result *= randf_range(0.9, 1.1)
-					final_result = snapped(final_result, 0.01);
+					if(do_random): # randomizer
+						final_result *= randf_range(0.9, 1.1)
+						final_result = snapped(final_result, 0.01);
 				"*":
 					final_result = multiply(x, y);
 					print("unmodified_result: " + str(final_result));
-					# randomizer
-					final_result *= randf_range(0.8, 1.2)
-					final_result = snapped(final_result, 0.01);
+					if(do_random): # randomizer
+						final_result *= randf_range(0.8, 1.2)
+						final_result = snapped(final_result, 0.01);
 				"-":
 					final_result = subtract(x, y);
 					print("unmodified_result: " + str(final_result));
-					# randomizer
-					final_result *= randf_range(0.75, 1.35)
-					final_result = snapped(final_result, 0.01);
+					if(do_random): # randomizer
+						final_result *= randf_range(0.75, 1.35)
+						final_result = snapped(final_result, 0.01);
 				"+":
 					final_result = addition(x, y);
 					print("unmodified_result: " + str(final_result));
-					# randomizer
-					final_result *= randf_range(0.6, 1.4)
-					final_result = snapped(final_result, 0.01);
+					if(do_random): # randomizer
+						final_result *= randf_range(0.6, 1.4)
+						final_result = snapped(final_result, 0.01);
 			
 			if((i+3) >= calculation.size()):
 				break;
@@ -123,7 +125,7 @@ func run_calc() -> float:
 	
 	screen_display += str(final_result) + "\n" + str(final_result); # update screen
 	
-	if(is_nan(final_result) || is_inf(final_result)): # account for is inf or nan
+	if(final_result == null || is_nan(final_result) || is_inf(final_result)): # account for is inf or nan
 		print("ran");
 		screen_display += "\n0.0";
 		final_result = 0.0;
@@ -138,7 +140,6 @@ func run_calc() -> float:
 	return float(final_result);
 
 func add_to_calc(value: String) -> void: ## adds the input to the calculation, and calls to update the screen
-	
 	var last_index = calculation.size()-1; ## the last index of the calculation array
 	
 	if(calculation.is_empty()):
@@ -159,55 +160,75 @@ func add_to_calc(value: String) -> void: ## adds the input to the calculation, a
 	
 	update_screen();
 
+func button_pressed() -> void:
+	SoundManager.button_press.play(0.01);
+
 func clear_calc() -> void:
 	print(str(calculation))
 	screen_display = "".join(calculation);
 	update_screen();
 
 func _on_button_1_pressed() -> void:
+	button_pressed();
 	add_to_calc("1");
 
 func _on_button_2_pressed() -> void:
+	button_pressed();
 	add_to_calc("2");
 
 func _on_button_3_pressed() -> void:
+	button_pressed();
 	add_to_calc("3");
 
 func _on_button_4_pressed() -> void:
+	button_pressed();
 	add_to_calc("4");
 
 func _on_button_5_pressed() -> void:
+	button_pressed();
 	add_to_calc("5");
 
 func _on_button_6_pressed() -> void:
+	button_pressed();
 	add_to_calc("6");
 	
 func _on_button_7_pressed() -> void:
+	button_pressed();
 	add_to_calc("7");
 
 func _on_button_8_pressed() -> void:
+	button_pressed();
 	add_to_calc("8");
 
 func _on_button_9_pressed() -> void:
+	button_pressed();
 	add_to_calc("9");
 
 func _on_button_0_pressed() -> void:
+	button_pressed();
 	add_to_calc("0");
 
 func _on_button_divide_pressed() -> void:
+	button_pressed();
 	add_to_calc("/");
 
 func _on_button_multiply_pressed() -> void:
+	button_pressed();
 	add_to_calc("*");
 
 func _on_button_subtract_pressed() -> void:
+	button_pressed();
 	add_to_calc("-");
 
 func _on_button_add_pressed() -> void:
+	button_pressed();
 	add_to_calc("+");
 
 func _on_button_enter_pressed() -> void:
+	button_pressed();
 	print(run_calc());
 
 func _on_button_clear_pressed() -> void:
+	SoundManager.clear.play(0.1);
+	await get_tree().create_timer(0.08).timeout;
 	clear_calc();

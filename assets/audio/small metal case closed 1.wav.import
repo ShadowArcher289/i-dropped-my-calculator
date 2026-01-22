@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c63585e3t4dpm"
+path="res://.godot/imported/small metal case closed 1.wav-43e7eb4a204d0c444dec85a63b85264a.sample"
+
+[deps]
+
+source_file="res://assets/audio/small metal case closed 1.wav"
+dest_files=["res://.godot/imported/small metal case closed 1.wav-43e7eb4a204d0c444dec85a63b85264a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

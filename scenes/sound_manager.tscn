@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://ijntc1i2ns6h"]
+
+[ext_resource type="AudioStream" uid="uid://bqqpuqyb2bf2" path="res://assets/audio/strap tighten 1.wav" id="1_5lwbd"]
+[ext_resource type="Script" uid="uid://bwepey3vidbld" path="res://scripts/SoundManager.gd" id="1_ro3ww"]
+[ext_resource type="AudioStream" uid="uid://blxenorolhajk" path="res://assets/audio/switch blade 2.wav" id="2_ro3ww"]
+[ext_resource type="AudioStream" uid="uid://dr4y7eyyp2hxh" path="res://assets/audio/coin.wav" id="3_v1pt3"]
+[ext_resource type="AudioStream" uid="uid://c63585e3t4dpm" path="res://assets/audio/small metal case closed 1.wav" id="4_mpi5b"]
+
+[node name="SoundManager" type="Node2D"]
+script = ExtResource("1_ro3ww")
+
+[node name="Clear" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_5lwbd")
+
+[node name="ButtonPress" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ro3ww")
+
+[node name="LevelUp" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_v1pt3")
+
+[node name="Unlock" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_mpi5b")

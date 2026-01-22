@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://blxenorolhajk"
+path="res://.godot/imported/switch blade 2.wav-79513c37732d1e25b7ad34e225c0afc6.sample"
+
+[deps]
+
+source_file="res://assets/audio/switch blade 2.wav"
+dest_files=["res://.godot/imported/switch blade 2.wav-79513c37732d1e25b7ad34e225c0afc6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
