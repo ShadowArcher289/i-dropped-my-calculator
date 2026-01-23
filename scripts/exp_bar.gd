@@ -1,4 +1,4 @@
-extends Control
+extends Node2D
 
 @onready var exp_bar_display: TextureProgressBar = $ExpBarDisplay
 @onready var level_display: RichTextLabel = $LevelDisplay

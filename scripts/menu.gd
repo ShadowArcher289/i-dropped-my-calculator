@@ -1,4 +1,4 @@
-extends Control
+extends Node2D
 
 @onready var toggle_menu: Button = $ToggleMenu
 @onready var text_display: Node2D = $TextDisplay

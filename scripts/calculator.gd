@@ -1,4 +1,4 @@
-extends Control
+extends Node2D
 
 @onready var button_1: Button = $Buttons/button1
 @onready var button_2: Button = $Buttons/button2
