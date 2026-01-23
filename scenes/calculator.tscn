@@ -8,7 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://xjy4sa3lk3p7" path="res://assets/calculator/EnterButton.png" id="4_jgmda"]
 [ext_resource type="Texture2D" uid="uid://dv6eo5vike224" path="res://assets/calculator/Screen.png" id="6_4a2e8"]
 
-[node name="Calculator" type="Node2D"]
+[node name="Calculator" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_4a2e8")
 
 [node name="CalcBackground" type="Sprite2D" parent="."]
@@ -216,6 +218,7 @@ scale = Vector2(0.5141975, 0.35339507)
 texture = ExtResource("6_4a2e8")
 
 [node name="ScreenText" type="RichTextLabel" parent="."]
+layout_mode = 0
 offset_left = 48.5
 offset_top = 47.0
 offset_right = 431.5
