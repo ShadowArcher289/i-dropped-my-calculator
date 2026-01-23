@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://co8sti2ydvcrl"]
+[gd_scene load_steps=39 format=3 uid="uid://co8sti2ydvcrl"]
 
 [ext_resource type="Script" uid="uid://2el0krcrw2qc" path="res://scripts/calculator.gd" id="1_4a2e8"]
 [ext_resource type="Texture2D" uid="uid://cwffnk5um8u33" path="res://assets/calculator/CalcBackground.png" id="1_47tay"]
@@ -7,6 +7,132 @@
 [ext_resource type="Texture2D" uid="uid://bng2w8i4kdg6h" path="res://assets/calculator/NumberButton.png" id="3_sio27"]
 [ext_resource type="Texture2D" uid="uid://xjy4sa3lk3p7" path="res://assets/calculator/EnterButton.png" id="4_jgmda"]
 [ext_resource type="Texture2D" uid="uid://dv6eo5vike224" path="res://assets/calculator/Screen.png" id="6_4a2e8"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_4a2e8"]
+device = -1
+keycode = 49
+unicode = 49
+
+[sub_resource type="Shortcut" id="Shortcut_pm7w1"]
+events = [SubResource("InputEventKey_4a2e8")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_pm7w1"]
+device = -1
+keycode = 50
+unicode = 50
+
+[sub_resource type="Shortcut" id="Shortcut_864p1"]
+events = [SubResource("InputEventKey_pm7w1")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_p7y4d"]
+device = -1
+keycode = 51
+unicode = 51
+
+[sub_resource type="Shortcut" id="Shortcut_vlk2w"]
+events = [SubResource("InputEventKey_p7y4d")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_pspxm"]
+device = -1
+keycode = 52
+unicode = 52
+
+[sub_resource type="Shortcut" id="Shortcut_uajx3"]
+events = [SubResource("InputEventKey_pspxm")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_rmndt"]
+device = -1
+keycode = 53
+unicode = 53
+
+[sub_resource type="Shortcut" id="Shortcut_8hjiu"]
+events = [SubResource("InputEventKey_rmndt")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_4ybf4"]
+device = -1
+keycode = 54
+unicode = 54
+
+[sub_resource type="Shortcut" id="Shortcut_4kog5"]
+events = [SubResource("InputEventKey_4ybf4")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_i40wg"]
+device = -1
+keycode = 55
+unicode = 55
+
+[sub_resource type="Shortcut" id="Shortcut_p2s8h"]
+events = [SubResource("InputEventKey_i40wg")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_lu1o0"]
+device = -1
+keycode = 56
+unicode = 56
+
+[sub_resource type="Shortcut" id="Shortcut_odtfm"]
+events = [SubResource("InputEventKey_lu1o0")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_lmwqp"]
+device = -1
+keycode = 57
+unicode = 57
+
+[sub_resource type="Shortcut" id="Shortcut_l1q0h"]
+events = [SubResource("InputEventKey_lmwqp")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_6lj6h"]
+device = -1
+keycode = 48
+unicode = 48
+
+[sub_resource type="Shortcut" id="Shortcut_6m6qa"]
+events = [SubResource("InputEventKey_6lj6h")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_lnsde"]
+device = -1
+keycode = 47
+unicode = 47
+
+[sub_resource type="Shortcut" id="Shortcut_3bmnh"]
+events = [SubResource("InputEventKey_lnsde")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_ug3jq"]
+device = -1
+shift_pressed = true
+keycode = 56
+unicode = 42
+
+[sub_resource type="Shortcut" id="Shortcut_m1h26"]
+events = [SubResource("InputEventKey_ug3jq")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_p33ym"]
+device = -1
+keycode = 45
+unicode = 45
+
+[sub_resource type="Shortcut" id="Shortcut_ppje6"]
+events = [SubResource("InputEventKey_p33ym")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_mnrwk"]
+device = -1
+shift_pressed = true
+keycode = 61
+unicode = 43
+
+[sub_resource type="Shortcut" id="Shortcut_pouw1"]
+events = [SubResource("InputEventKey_mnrwk")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_1bb0f"]
+device = -1
+keycode = 4194309
+
+[sub_resource type="InputEventKey" id="InputEventKey_07ieh"]
+device = -1
+keycode = 61
+unicode = 61
+
+[sub_resource type="Shortcut" id="Shortcut_j0ha4"]
+events = [SubResource("InputEventKey_1bb0f"), SubResource("InputEventKey_07ieh")]
 
 [node name="Calculator" type="Node2D"]
 script = ExtResource("1_4a2e8")
@@ -26,6 +152,7 @@ theme = ExtResource("2_jgmda")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_q1y2q")
 theme_override_font_sizes/font_size = 32
+shortcut = SubResource("Shortcut_pm7w1")
 text = "1"
 icon = ExtResource("3_sio27")
 icon_alignment = 1
@@ -38,6 +165,7 @@ offset_bottom = 348.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_q1y2q")
 theme_override_font_sizes/font_size = 32
+shortcut = SubResource("Shortcut_864p1")
 text = "2"
 icon = ExtResource("3_sio27")
 icon_alignment = 1
@@ -50,6 +178,7 @@ offset_bottom = 348.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_q1y2q")
 theme_override_font_sizes/font_size = 32
+shortcut = SubResource("Shortcut_vlk2w")
 text = "3"
 icon = ExtResource("3_sio27")
 icon_alignment = 1
@@ -62,6 +191,7 @@ offset_bottom = 418.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_q1y2q")
 theme_override_font_sizes/font_size = 32
+shortcut = SubResource("Shortcut_uajx3")
 text = "4"
 icon = ExtResource("3_sio27")
 icon_alignment = 1
@@ -74,6 +204,7 @@ offset_bottom = 418.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_q1y2q")
 theme_override_font_sizes/font_size = 32
+shortcut = SubResource("Shortcut_8hjiu")
 text = "5"
 icon = ExtResource("3_sio27")
 icon_alignment = 1
@@ -86,6 +217,7 @@ offset_bottom = 418.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_q1y2q")
 theme_override_font_sizes/font_size = 32
+shortcut = SubResource("Shortcut_4kog5")
 text = "6"
 icon = ExtResource("3_sio27")
 icon_alignment = 1
@@ -98,6 +230,7 @@ offset_bottom = 490.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_q1y2q")
 theme_override_font_sizes/font_size = 32
+shortcut = SubResource("Shortcut_p2s8h")
 text = "7"
 icon = ExtResource("3_sio27")
 icon_alignment = 1
@@ -110,6 +243,7 @@ offset_bottom = 490.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_q1y2q")
 theme_override_font_sizes/font_size = 32
+shortcut = SubResource("Shortcut_odtfm")
 text = "8"
 icon = ExtResource("3_sio27")
 icon_alignment = 1
@@ -122,6 +256,7 @@ offset_bottom = 488.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_q1y2q")
 theme_override_font_sizes/font_size = 32
+shortcut = SubResource("Shortcut_l1q0h")
 text = "9"
 icon = ExtResource("3_sio27")
 icon_alignment = 1
@@ -134,6 +269,7 @@ offset_bottom = 560.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_q1y2q")
 theme_override_font_sizes/font_size = 32
+shortcut = SubResource("Shortcut_6m6qa")
 text = "0"
 icon = ExtResource("3_sio27")
 icon_alignment = 1
@@ -147,6 +283,7 @@ scale = Vector2(0.8, 0.8)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_q1y2q")
 theme_override_font_sizes/font_size = 32
+shortcut = SubResource("Shortcut_3bmnh")
 text = "/"
 icon = ExtResource("3_sio27")
 icon_alignment = 1
@@ -160,6 +297,7 @@ scale = Vector2(0.8, 0.8)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_q1y2q")
 theme_override_font_sizes/font_size = 32
+shortcut = SubResource("Shortcut_m1h26")
 text = "x"
 icon = ExtResource("3_sio27")
 icon_alignment = 1
@@ -173,6 +311,7 @@ scale = Vector2(0.8, 0.8)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_q1y2q")
 theme_override_font_sizes/font_size = 32
+shortcut = SubResource("Shortcut_ppje6")
 text = "-"
 icon = ExtResource("3_sio27")
 icon_alignment = 1
@@ -184,6 +323,7 @@ offset_right = 440.50003
 offset_bottom = 516.0
 scale = Vector2(0.8, 0.8)
 theme = ExtResource("2_jgmda")
+shortcut = SubResource("Shortcut_pouw1")
 text = "+"
 icon = ExtResource("3_sio27")
 icon_alignment = 1
@@ -194,6 +334,7 @@ offset_top = 516.0
 offset_right = 430.5
 offset_bottom = 602.0
 theme = ExtResource("2_jgmda")
+shortcut = SubResource("Shortcut_j0ha4")
 text = "enter"
 icon = ExtResource("4_jgmda")
 icon_alignment = 1

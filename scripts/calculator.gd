@@ -1,6 +1,6 @@
 extends Node2D
 
-# FEATURES TO ADD: TODO: Allow Decimals, Keybind computer buttons, clear button clears the current number aswell.
+# FEATURES TO ADD: TODO: Allow Decimals, Keybind computer buttons.
 
 @onready var button_1: Button = $Buttons/button1
 @onready var button_2: Button = $Buttons/button2
@@ -46,6 +46,90 @@ func _ready() -> void:
 	button_add.focus_mode = Control.FOCUS_NONE;
 	button_enter.focus_mode = Control.FOCUS_NONE;
 	button_clear.focus_mode = Control.FOCUS_NONE;
+
+func _input(event: InputEvent) -> void:
+	pass
+	#if(event.is_action_pressed("one")):
+		#_on_button_1_pressed();
+		#button_1.button_pressed = true;
+		#await get_tree().create_timer(0.1).timeout;
+		#button_1.button_pressed = false;
+	#elif(event.is_action_pressed("two")):
+		#_on_button_2_pressed();
+		#button_2.button_pressed = true;
+		#await get_tree().create_timer(0.1).timeout;
+		#button_2.button_pressed = false;
+	#elif(event.is_action_pressed("three")):
+		#_on_button_3_pressed();
+		#button_3.button_pressed = true;
+		#await get_tree().create_timer(0.1).timeout;
+		#button_3.button_pressed = false;
+	#elif(event.is_action_pressed("four")):
+		#_on_button_4_pressed();
+		#button_4.button_pressed = true;
+		#await get_tree().create_timer(0.1).timeout;
+		#button_4.button_pressed = false;
+	#elif(event.is_action_pressed("five")):
+		#_on_button_5_pressed();
+		#button_5.button_pressed = true;
+		#await get_tree().create_timer(0.1).timeout;
+		#button_5.button_pressed = false;
+	#elif(event.is_action_pressed("six")):
+		#_on_button_6_pressed();
+		#button_6.button_pressed = true;
+		#await get_tree().create_timer(0.1).timeout;
+		#button_6.button_pressed = false;
+	#elif(event.is_action_pressed("seven")):
+		#_on_button_7_pressed();
+		#button_7.button_pressed = true;
+		#await get_tree().create_timer(0.1).timeout;
+		#button_7.button_pressed = false;
+	#elif(event.is_action_pressed("eight")):
+		#_on_button_8_pressed();
+		#button_8.button_pressed = true;
+		#await get_tree().create_timer(0.1).timeout;
+		#button_8.button_pressed = false;
+	#elif(event.is_action_pressed("nine")):
+		#_on_button_9_pressed();
+		#button_9.button_pressed = true;
+		#await get_tree().create_timer(0.1).timeout;
+		#button_9.button_pressed = false;
+	#elif(event.is_action_pressed("zero")):
+		#_on_button_0_pressed();
+		#button_0.button_pressed = true;
+		#await get_tree().create_timer(0.1).timeout;
+		#button_0.button_pressed = false;
+	#elif(event.is_action_pressed("divide")):
+		#_on_button_divide_pressed()
+		#button_divide.button_pressed = true;
+		#await get_tree().create_timer(0.1).timeout;
+		#button_divide.button_pressed = false;
+	#elif(event.is_action_pressed("multiply")):
+		#_on_button_multiply_pressed()
+		#button_multiply.button_pressed = true;
+		#await get_tree().create_timer(0.1).timeout;
+		#button_multiply.button_pressed = false;
+	#elif(event.is_action_pressed("subtract")):
+		#_on_button_subtract_pressed()
+		#button_subtract.button_pressed = true;
+		#await get_tree().create_timer(0.1).timeout;
+		#button_subtract.button_pressed = false;
+	#elif(event.is_action_pressed("add")):
+		#_on_button_add_pressed()
+		#button_add.button_pressed = true;
+		#await get_tree().create_timer(0.1).timeout;
+		#button_add.button_pressed = false;
+	#elif(event.is_action_pressed("equals")):
+		#_on_button_enter_pressed()
+		#button_enter.button_pressed = true;
+		#await get_tree().create_timer(0.1).timeout;
+		#button_enter.button_pressed = false;
+	#elif(event.is_action_pressed("clear")):
+		#_on_button_clear_pressed()
+		#button_clear.button_pressed = true;
+		#await get_tree().create_timer(0.1).timeout;
+		#button_clear.button_pressed = false;
+		
 
 func _disable_random() -> void:
 	print_debug("Randomness Disabled");
