@@ -1,5 +1,7 @@
 extends Node2D
 
+# FEATURES TO ADD: TODO: Allow Decimals, Keybind computer buttons, clear button clears the current number aswell.
+
 @onready var button_1: Button = $Buttons/button1
 @onready var button_2: Button = $Buttons/button2
 @onready var button_3: Button = $Buttons/button3
