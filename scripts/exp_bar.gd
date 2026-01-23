@@ -27,7 +27,6 @@ func gain_exp(gained_exp: int) -> void: ## increase exp
 	SoundManager.gain_exp.play();
 	if (old_level != level): # play level up sound if the level changed
 		SoundManager.level_up.play();
-		level = 99
 		if(level >= 99.0): ## play celebration sfx when the level is above 99
 			SoundManager.celebration.play();
 			SignalBus.disable_random.emit(); # disable randomness at level 99

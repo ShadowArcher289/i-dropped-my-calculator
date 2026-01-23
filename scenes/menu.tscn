@@ -59,4 +59,14 @@ Different operations provide different amounts of exp.
 
 Get to level 99+ for a surprise :)"
 
+[node name="BrokennessToggle" type="CheckButton" parent="."]
+z_index = 4
+layout_mode = 0
+offset_right = 44.0
+offset_bottom = 24.0
+button_pressed = true
+text = "Brokeness Toggle 
+(disable if you give up)"
+
 [connection signal="pressed" from="ToggleMenu" to="." method="_on_toggle_menu_pressed"]
+[connection signal="toggled" from="BrokennessToggle" to="." method="_on_check_button_toggled"]
