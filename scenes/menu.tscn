@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://cypinnyil4cjs"]
+
+[ext_resource type="Script" uid="uid://e0m8sp5rjw0c" path="res://scripts/menu.gd" id="1_4ytvr"]
+[ext_resource type="FontFile" uid="uid://cslolpkbwdier" path="res://assets/fonts/boldpixels.boldpixels.otf" id="1_vjb58"]
+[ext_resource type="Texture2D" uid="uid://dp5rlgee6to4o" path="res://assets/calculator/MenuButton.png" id="1_yqeox"]
+[ext_resource type="Theme" uid="uid://c635ramjqf4e0" path="res://assets/CalculatorButtonsStyle.tres" id="3_con2f"]
+[ext_resource type="Texture2D" uid="uid://cwffnk5um8u33" path="res://assets/calculator/CalcBackground.png" id="3_mhnvy"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4ytvr")
+
+[node name="ToggleMenu" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -168.0
+offset_top = -136.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_vjb58")
+icon = ExtResource("1_yqeox")
+
+[node name="TextDisplay" type="Node2D" parent="."]
+z_index = 5
+
+[node name="CalcBackground" type="Sprite2D" parent="TextDisplay"]
+position = Vector2(559, 325)
+rotation = -1.5707964
+texture = ExtResource("3_mhnvy")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextDisplay"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 277.0
+offset_top = 119.0
+offset_right = 846.0
+offset_bottom = 530.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_con2f")
+theme_override_font_sizes/normal_font_size = 30
+text = "Oops! I dropped my calculator! Now it's broken :(
+
+Gain experience by calculating the number shown on the top-right panel, or a number within 0.5 digits of it. Getting the exact number rewards 2x exp. 
+
+Different operations provide different amounts of exp.
+
+Get to level 99+ for a surprise :)"
+
+[connection signal="pressed" from="ToggleMenu" to="." method="_on_toggle_menu_pressed"]

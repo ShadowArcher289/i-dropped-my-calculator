@@ -19,12 +19,15 @@ extends Node2D
 
 @onready var screen_text: RichTextLabel = $ScreenText
 
-var do_random = false; ## true to do random output, false to do normal output
+var do_random = true; ## true to do random output, false to do normal output
 
 var screen_display = "";
 var calculation: Array = [];
 
 func _ready() -> void:
+	SignalBus.disable_random.connect(_disable_random);
+	SignalBus.enable_random.connect(_enable_random);
+
 	button_1.focus_mode = Control.FOCUS_NONE;
 	button_2.focus_mode = Control.FOCUS_NONE;
 	button_3.focus_mode = Control.FOCUS_NONE;
@@ -41,6 +44,14 @@ func _ready() -> void:
 	button_add.focus_mode = Control.FOCUS_NONE;
 	button_enter.focus_mode = Control.FOCUS_NONE;
 	button_clear.focus_mode = Control.FOCUS_NONE;
+
+func _disable_random() -> void:
+	print_debug("Randomness Disabled");
+	do_random = false;
+
+func _enable_random() -> void:
+	print_debug("Randomness Enabled");
+	do_random = true;
 
 func divide(x, y) -> float: ## x / y
 	return float(x) / float(y);
@@ -90,31 +101,34 @@ func run_calc() -> float:
 				y = calculation.get(i+2);
 				
 			
-			match operation:
-				"/":
-					final_result = divide(x, y);
-					print("unmodified_result: " + str(final_result));
-					if(do_random): # randomizer
-						final_result *= randf_range(0.9, 1.1)
-						final_result = snapped(final_result, 0.01);
-				"*":
-					final_result = multiply(x, y);
-					print("unmodified_result: " + str(final_result));
-					if(do_random): # randomizer
-						final_result *= randf_range(0.8, 1.2)
-						final_result = snapped(final_result, 0.01);
-				"-":
-					final_result = subtract(x, y);
-					print("unmodified_result: " + str(final_result));
-					if(do_random): # randomizer
-						final_result *= randf_range(0.75, 1.35)
-						final_result = snapped(final_result, 0.01);
-				"+":
-					final_result = addition(x, y);
-					print("unmodified_result: " + str(final_result));
-					if(do_random): # randomizer
-						final_result *= randf_range(0.6, 1.4)
-						final_result = snapped(final_result, 0.01);
+			if(x != null && y != null):
+				match operation:
+					"/":
+						final_result = divide(x, y);
+						print("unmodified_result: " + str(final_result));
+						if(do_random): # randomizer
+							final_result *= randf_range(0.9, 1.1)
+							final_result = snapped(final_result, 0.01);
+					"*":
+						final_result = multiply(x, y);
+						print("unmodified_result: " + str(final_result));
+						if(do_random): # randomizer
+							final_result *= randf_range(0.8, 1.2)
+							final_result = snapped(final_result, 0.01);
+					"-":
+						final_result = subtract(x, y);
+						print("unmodified_result: " + str(final_result));
+						if(do_random): # randomizer
+							final_result *= randf_range(0.75, 1.35)
+							final_result = snapped(final_result, 0.01);
+					"+":
+						final_result = addition(x, y);
+						print("unmodified_result: " + str(final_result));
+						if(do_random): # randomizer
+							final_result *= randf_range(0.6, 1.4)
+							final_result = snapped(final_result, 0.01);
+			else:
+				final_result = null;
 			
 			if((i+3) >= calculation.size()):
 				break;
