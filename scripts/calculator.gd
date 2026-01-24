@@ -1,6 +1,6 @@
 extends Node2D
 
-# FEATURES TO ADD: TODO: Allow Decimals, Keybind computer buttons.
+# FEATURES TO ADD: TODO: Allow Decimals
 
 @onready var button_1: Button = $Buttons/button1
 @onready var button_2: Button = $Buttons/button2
@@ -18,6 +18,7 @@ extends Node2D
 @onready var button_add: Button = $Buttons/buttonAdd
 @onready var button_enter: Button = $Buttons/buttonEnter
 @onready var button_clear: Button = $Buttons/buttonClear
+@onready var button_dot: Button = $Buttons/buttonDot
 
 @onready var screen_text: RichTextLabel = $ScreenText
 
@@ -243,16 +244,33 @@ func add_to_calc(value: String) -> void: ## adds the input to the calculation, a
 	var last_index = calculation.size()-1; ## the last index of the calculation array
 	
 	if(calculation.is_empty()):
-		if(value.is_valid_float()):
-			calculation.append(value);
-			screen_display += value;
-	else:
-		if(value.is_valid_float()): # run logic if the value is a number.
-			if(!calculation.get(last_index).is_valid_float()): # add to the array if the previous value is not a number
+		if(value.is_valid_float() || value == "."):
+			if(value != "."):
 				calculation.append(value);
-			else: # update the last value in the array if it is a valid number (ex: 1 -> 13)
-				calculation.set(last_index, calculation.get(last_index) + value);
-			screen_display += value;
+				screen_display += value;
+			else:
+				value = "0."
+				calculation.append(value);
+				screen_display += value;
+					
+	else:
+		if(value.is_valid_float() || value == "."): # run logic if the value is a number.
+			if(!('.' in calculation.get(last_index))):
+				if(!calculation.get(last_index).is_valid_float()): # add to the array if the previous value is not a number
+					if(value != "."):
+						calculation.append(value);
+					else:
+						value = "0."
+						calculation.append(value);
+				else: # update the last value in the array if it is a valid number (ex: 1 -> 13)
+					calculation.set(last_index, calculation.get(last_index) + value);
+				screen_display += value;
+			elif(value != "."):
+				if(!calculation.get(last_index).is_valid_float()): # add to the array if the previous value is not a number
+					calculation.append(value);
+				else: # update the last value in the array if it is a valid number (ex: 1 -> 13)
+					calculation.set(last_index, calculation.get(last_index) + value);
+				screen_display += value;
 		else: # append non-number values to calculation
 			if(calculation.get(last_index).is_valid_float()): # do not put two non-number values next to eachother
 				calculation.append(value);
@@ -333,3 +351,7 @@ func _on_button_clear_pressed() -> void:
 	SoundManager.clear.play(0.1);
 	await get_tree().create_timer(0.08).timeout;
 	clear_calc();
+
+func _on_button_dot_pressed() -> void:
+	button_pressed();
+	add_to_calc(".");

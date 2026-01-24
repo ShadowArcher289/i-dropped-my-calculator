@@ -113,14 +113,13 @@ unicode = 45
 [sub_resource type="Shortcut" id="Shortcut_ppje6"]
 events = [SubResource("InputEventKey_p33ym")]
 
-[sub_resource type="InputEventKey" id="InputEventKey_mnrwk"]
+[sub_resource type="InputEventKey" id="InputEventKey_864p1"]
 device = -1
-shift_pressed = true
-keycode = 61
-unicode = 43
+keycode = 46
+unicode = 46
 
 [sub_resource type="Shortcut" id="Shortcut_pouw1"]
-events = [SubResource("InputEventKey_mnrwk")]
+events = [SubResource("InputEventKey_864p1")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_1bb0f"]
 device = -1
@@ -144,9 +143,9 @@ texture = ExtResource("1_47tay")
 [node name="Buttons" type="Node2D" parent="."]
 
 [node name="button1" type="Button" parent="Buttons"]
-offset_left = 89.5
+offset_left = 73.5
 offset_top = 292.0
-offset_right = 161.5
+offset_right = 145.5
 offset_bottom = 348.0
 theme = ExtResource("2_jgmda")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -158,9 +157,9 @@ icon = ExtResource("3_sio27")
 icon_alignment = 1
 
 [node name="button2" type="Button" parent="Buttons"]
-offset_left = 174.5
+offset_left = 158.5
 offset_top = 292.0
-offset_right = 246.5
+offset_right = 230.5
 offset_bottom = 348.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_q1y2q")
@@ -171,9 +170,9 @@ icon = ExtResource("3_sio27")
 icon_alignment = 1
 
 [node name="button3" type="Button" parent="Buttons"]
-offset_left = 259.5
+offset_left = 243.5
 offset_top = 292.0
-offset_right = 331.5
+offset_right = 315.5
 offset_bottom = 348.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_q1y2q")
@@ -184,9 +183,9 @@ icon = ExtResource("3_sio27")
 icon_alignment = 1
 
 [node name="button4" type="Button" parent="Buttons"]
-offset_left = 89.5
+offset_left = 73.5
 offset_top = 362.0
-offset_right = 161.5
+offset_right = 145.5
 offset_bottom = 418.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_q1y2q")
@@ -197,9 +196,9 @@ icon = ExtResource("3_sio27")
 icon_alignment = 1
 
 [node name="button5" type="Button" parent="Buttons"]
-offset_left = 174.5
+offset_left = 159.5
 offset_top = 362.0
-offset_right = 246.5
+offset_right = 231.5
 offset_bottom = 418.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_q1y2q")
@@ -210,9 +209,9 @@ icon = ExtResource("3_sio27")
 icon_alignment = 1
 
 [node name="button6" type="Button" parent="Buttons"]
-offset_left = 259.5
+offset_left = 243.5
 offset_top = 362.0
-offset_right = 331.5
+offset_right = 315.5
 offset_bottom = 418.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_q1y2q")
@@ -223,9 +222,9 @@ icon = ExtResource("3_sio27")
 icon_alignment = 1
 
 [node name="button7" type="Button" parent="Buttons"]
-offset_left = 90.5
+offset_left = 74.5
 offset_top = 434.0
-offset_right = 162.5
+offset_right = 146.5
 offset_bottom = 490.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_q1y2q")
@@ -236,10 +235,10 @@ icon = ExtResource("3_sio27")
 icon_alignment = 1
 
 [node name="button8" type="Button" parent="Buttons"]
-offset_left = 176.5
-offset_top = 434.0
-offset_right = 248.5
-offset_bottom = 490.0
+offset_left = 159.5
+offset_top = 430.0
+offset_right = 231.5
+offset_bottom = 486.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_q1y2q")
 theme_override_font_sizes/font_size = 32
@@ -249,9 +248,9 @@ icon = ExtResource("3_sio27")
 icon_alignment = 1
 
 [node name="button9" type="Button" parent="Buttons"]
-offset_left = 261.5
+offset_left = 244.5
 offset_top = 432.0
-offset_right = 333.5
+offset_right = 316.5
 offset_bottom = 488.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_q1y2q")
@@ -262,10 +261,10 @@ icon = ExtResource("3_sio27")
 icon_alignment = 1
 
 [node name="button0" type="Button" parent="Buttons"]
-offset_left = 175.5
-offset_top = 504.0
-offset_right = 247.5
-offset_bottom = 560.0
+offset_left = 159.5
+offset_top = 498.0
+offset_right = 231.5
+offset_bottom = 554.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_q1y2q")
 theme_override_font_sizes/font_size = 32
@@ -329,10 +328,10 @@ icon = ExtResource("3_sio27")
 icon_alignment = 1
 
 [node name="buttonEnter" type="Button" parent="Buttons"]
-offset_left = 266.5
-offset_top = 516.0
-offset_right = 430.5
-offset_bottom = 602.0
+offset_left = 323.0
+offset_top = 545.0
+offset_right = 447.0
+offset_bottom = 610.0
 theme = ExtResource("2_jgmda")
 shortcut = SubResource("Shortcut_j0ha4")
 text = "enter"
@@ -341,15 +340,27 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="buttonClear" type="Button" parent="Buttons"]
-offset_left = 46.5
-offset_top = 539.0
-offset_right = 159.5
-offset_bottom = 597.0
+offset_left = 31.0
+offset_top = 554.0
+offset_right = 144.0
+offset_bottom = 612.0
 theme = ExtResource("2_jgmda")
 text = "clear"
 icon = ExtResource("4_jgmda")
 icon_alignment = 1
 expand_icon = true
+
+[node name="buttonDot" type="Button" parent="Buttons"]
+offset_left = 253.0
+offset_top = 556.0
+offset_right = 325.0
+offset_bottom = 612.0
+scale = Vector2(0.8, 0.8)
+theme = ExtResource("2_jgmda")
+shortcut = SubResource("Shortcut_pouw1")
+text = "."
+icon = ExtResource("3_sio27")
+icon_alignment = 1
 
 [node name="Screen" type="Sprite2D" parent="."]
 position = Vector2(240.82095, 151.99997)
@@ -381,3 +392,4 @@ vertical_alignment = 2
 [connection signal="pressed" from="Buttons/buttonAdd" to="." method="_on_button_add_pressed"]
 [connection signal="pressed" from="Buttons/buttonEnter" to="." method="_on_button_enter_pressed"]
 [connection signal="pressed" from="Buttons/buttonClear" to="." method="_on_button_clear_pressed"]
+[connection signal="pressed" from="Buttons/buttonDot" to="." method="_on_button_dot_pressed"]
