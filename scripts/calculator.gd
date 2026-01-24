@@ -265,8 +265,8 @@ func button_pressed() -> void:
 
 func clear_calc() -> void:
 	print(str(calculation))
-	calculation = [];
-	screen_display = "";
+	calculation = ["0.0"];
+	screen_display = "0.0";
 	update_screen();
 
 func _on_button_1_pressed() -> void:
