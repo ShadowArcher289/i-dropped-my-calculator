@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://co8sti2ydvcrl"]
+[gd_scene load_steps=59 format=3 uid="uid://co8sti2ydvcrl"]
 
 [ext_resource type="Script" uid="uid://2el0krcrw2qc" path="res://scripts/calculator.gd" id="1_4a2e8"]
 [ext_resource type="Texture2D" uid="uid://cwffnk5um8u33" path="res://assets/calculator/CalcBackground.png" id="1_47tay"]
@@ -13,88 +13,131 @@ device = -1
 keycode = 49
 unicode = 49
 
+[sub_resource type="InputEventKey" id="InputEventKey_p2s8h"]
+device = -1
+keycode = 4194439
+unicode = 49
+
 [sub_resource type="Shortcut" id="Shortcut_pm7w1"]
-events = [SubResource("InputEventKey_4a2e8")]
+events = [SubResource("InputEventKey_4a2e8"), SubResource("InputEventKey_p2s8h")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_pm7w1"]
 device = -1
 keycode = 50
 unicode = 50
 
+[sub_resource type="InputEventKey" id="InputEventKey_odtfm"]
+device = -1
+keycode = 4194440
+unicode = 50
+
 [sub_resource type="Shortcut" id="Shortcut_864p1"]
-events = [SubResource("InputEventKey_pm7w1")]
+events = [SubResource("InputEventKey_pm7w1"), SubResource("InputEventKey_odtfm")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_p7y4d"]
 device = -1
 keycode = 51
 unicode = 51
 
+[sub_resource type="InputEventKey" id="InputEventKey_l1q0h"]
+device = -1
+keycode = 4194441
+unicode = 51
+
 [sub_resource type="Shortcut" id="Shortcut_vlk2w"]
-events = [SubResource("InputEventKey_p7y4d")]
+events = [SubResource("InputEventKey_p7y4d"), SubResource("InputEventKey_l1q0h")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_pspxm"]
 device = -1
 keycode = 52
 unicode = 52
 
+[sub_resource type="InputEventKey" id="InputEventKey_6m6qa"]
+device = -1
+keycode = 4194442
+unicode = 52
+
 [sub_resource type="Shortcut" id="Shortcut_uajx3"]
-events = [SubResource("InputEventKey_pspxm")]
+events = [SubResource("InputEventKey_pspxm"), SubResource("InputEventKey_6m6qa")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_rmndt"]
 device = -1
 keycode = 53
 unicode = 53
 
+[sub_resource type="InputEventKey" id="InputEventKey_3bmnh"]
+keycode = 4194443
+
 [sub_resource type="Shortcut" id="Shortcut_8hjiu"]
-events = [SubResource("InputEventKey_rmndt")]
+events = [SubResource("InputEventKey_rmndt"), SubResource("InputEventKey_3bmnh")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_4ybf4"]
 device = -1
 keycode = 54
 unicode = 54
 
+[sub_resource type="InputEventKey" id="InputEventKey_m1h26"]
+keycode = 4194444
+
 [sub_resource type="Shortcut" id="Shortcut_4kog5"]
-events = [SubResource("InputEventKey_4ybf4")]
+events = [SubResource("InputEventKey_4ybf4"), SubResource("InputEventKey_m1h26")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_i40wg"]
 device = -1
 keycode = 55
 unicode = 55
 
+[sub_resource type="InputEventKey" id="InputEventKey_ppje6"]
+keycode = 4194445
+
 [sub_resource type="Shortcut" id="Shortcut_p2s8h"]
-events = [SubResource("InputEventKey_i40wg")]
+events = [SubResource("InputEventKey_i40wg"), SubResource("InputEventKey_ppje6")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_lu1o0"]
 device = -1
 keycode = 56
 unicode = 56
 
+[sub_resource type="InputEventKey" id="InputEventKey_mnrwk"]
+keycode = 4194446
+
 [sub_resource type="Shortcut" id="Shortcut_odtfm"]
-events = [SubResource("InputEventKey_lu1o0")]
+events = [SubResource("InputEventKey_lu1o0"), SubResource("InputEventKey_mnrwk")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_lmwqp"]
 device = -1
 keycode = 57
 unicode = 57
 
+[sub_resource type="InputEventKey" id="InputEventKey_4kog5"]
+keycode = 4194447
+
 [sub_resource type="Shortcut" id="Shortcut_l1q0h"]
-events = [SubResource("InputEventKey_lmwqp")]
+events = [SubResource("InputEventKey_lmwqp"), SubResource("InputEventKey_4kog5")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_6lj6h"]
 device = -1
 keycode = 48
 unicode = 48
 
+[sub_resource type="InputEventKey" id="InputEventKey_pouw1"]
+keycode = 4194438
+
 [sub_resource type="Shortcut" id="Shortcut_6m6qa"]
-events = [SubResource("InputEventKey_6lj6h")]
+events = [SubResource("InputEventKey_6lj6h"), SubResource("InputEventKey_pouw1")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_lnsde"]
 device = -1
 keycode = 47
 unicode = 47
 
+[sub_resource type="InputEventKey" id="InputEventKey_j0ha4"]
+device = -1
+keycode = 4194434
+unicode = 47
+
 [sub_resource type="Shortcut" id="Shortcut_3bmnh"]
-events = [SubResource("InputEventKey_lnsde")]
+events = [SubResource("InputEventKey_lnsde"), SubResource("InputEventKey_j0ha4")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_ug3jq"]
 device = -1
@@ -102,24 +145,40 @@ shift_pressed = true
 keycode = 56
 unicode = 42
 
+[sub_resource type="InputEventKey" id="InputEventKey_ojoy4"]
+device = -1
+keycode = 4194433
+unicode = 42
+
 [sub_resource type="Shortcut" id="Shortcut_m1h26"]
-events = [SubResource("InputEventKey_ug3jq")]
+events = [SubResource("InputEventKey_ug3jq"), SubResource("InputEventKey_ojoy4")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_p33ym"]
 device = -1
 keycode = 45
 unicode = 45
 
+[sub_resource type="InputEventKey" id="InputEventKey_jiyjc"]
+device = -1
+keycode = 4194435
+unicode = 45
+
 [sub_resource type="Shortcut" id="Shortcut_ppje6"]
-events = [SubResource("InputEventKey_p33ym")]
+events = [SubResource("InputEventKey_p33ym"), SubResource("InputEventKey_jiyjc")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_864p1"]
 device = -1
-keycode = 46
-unicode = 46
+shift_pressed = true
+keycode = 61
+unicode = 43
 
-[sub_resource type="Shortcut" id="Shortcut_pouw1"]
-events = [SubResource("InputEventKey_864p1")]
+[sub_resource type="InputEventKey" id="InputEventKey_xur5g"]
+device = -1
+keycode = 4194437
+unicode = 43
+
+[sub_resource type="Shortcut" id="Shortcut_p7y4d"]
+events = [SubResource("InputEventKey_864p1"), SubResource("InputEventKey_xur5g")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_1bb0f"]
 device = -1
@@ -130,8 +189,31 @@ device = -1
 keycode = 61
 unicode = 61
 
+[sub_resource type="InputEventKey" id="InputEventKey_oyxth"]
+device = -1
+keycode = 4194310
+
 [sub_resource type="Shortcut" id="Shortcut_j0ha4"]
-events = [SubResource("InputEventKey_1bb0f"), SubResource("InputEventKey_07ieh")]
+events = [SubResource("InputEventKey_1bb0f"), SubResource("InputEventKey_07ieh"), SubResource("InputEventKey_oyxth")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_vlk2w"]
+device = -1
+keycode = 4194312
+
+[sub_resource type="InputEventKey" id="InputEventKey_uajx3"]
+device = -1
+keycode = 4194308
+
+[sub_resource type="Shortcut" id="Shortcut_rmndt"]
+events = [SubResource("InputEventKey_vlk2w"), SubResource("InputEventKey_uajx3")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_8hjiu"]
+device = -1
+keycode = 46
+unicode = 46
+
+[sub_resource type="Shortcut" id="Shortcut_pouw1"]
+events = [SubResource("InputEventKey_8hjiu")]
 
 [node name="Calculator" type="Node2D"]
 script = ExtResource("1_4a2e8")
@@ -322,7 +404,7 @@ offset_right = 440.50003
 offset_bottom = 516.0
 scale = Vector2(0.8, 0.8)
 theme = ExtResource("2_jgmda")
-shortcut = SubResource("Shortcut_pouw1")
+shortcut = SubResource("Shortcut_p7y4d")
 text = "+"
 icon = ExtResource("3_sio27")
 icon_alignment = 1
@@ -345,6 +427,7 @@ offset_top = 554.0
 offset_right = 144.0
 offset_bottom = 612.0
 theme = ExtResource("2_jgmda")
+shortcut = SubResource("Shortcut_rmndt")
 text = "clear"
 icon = ExtResource("4_jgmda")
 icon_alignment = 1

@@ -27,9 +27,9 @@ func gain_exp(gained_exp: int) -> void: ## increase exp
 	SoundManager.gain_exp.play();
 	if (old_level != level): # play level up sound if the level changed
 		SoundManager.level_up.play();
-		if(level >= 99.0): ## play celebration sfx when the level is above 99
+		if(level >= 50.0): ## play celebration sfx when the level is above 50
 			SoundManager.celebration.play();
-			SignalBus.disable_random.emit(); # disable randomness at level 99
+			SignalBus.disable_random.emit(); # disable randomness at level 50
 		
 
 func _result_calculated(result: float, operation: String) -> void:
@@ -37,13 +37,13 @@ func _result_calculated(result: float, operation: String) -> void:
 		var gained_exp = 0;
 		match operation:
 			"/":
-				gained_exp = (50);
+				gained_exp = (55);
 			"*":
-				gained_exp = (35);
+				gained_exp = (45);
 			"-":
-				gained_exp = (30);
+				gained_exp = (35);
 			"+":
-				gained_exp = (25);
+				gained_exp = (30);
 			_:
 				print_debug("invalid operation: " + operation);
 			
